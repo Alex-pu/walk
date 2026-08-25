@@ -1,8 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Run Community Kenya icon">
-  <rect width="512" height="512" rx="96" fill="#0f766e"/>
-  <path d="M96 318c56-72 111-72 167 0s111 72 167 0" fill="none" stroke="#d8efe7" stroke-width="38" stroke-linecap="round"/>
-  <circle cx="188" cy="168" r="42" fill="#fef3c7"/>
-  <path d="M244 218l-42 82 58 38 50 84" fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M244 218l78 42 56-28" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M202 300l-48 86" fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="RCKE app icon">
+  <rect width="512" height="512" rx="88" fill="#141414"/>
+  <path d="M86 44h340l42 42v340l-42 42H86l-42-42V86z" fill="#ffc900"/>
+  <path d="M104 76h304l28 28v304l-28 28H104l-28-28V104z" fill="#45143f"/>
+  <path d="M130 108h252l22 22v252l-22 22H130l-22-22V130z" fill="#983b86"/>
+  <path d="M108 258h296" stroke="#ffc900" stroke-width="16" stroke-linecap="square"/>
+  <text
+    x="256"
+    y="216"
+    text-anchor="middle"
+    font-family="Varsity Team, Graduate, Rockwell Extra Bold, Impact, sans-serif"
+    font-size="126"
+    font-weight="900"
+    letter-spacing="2"
+    fill="#ffffff"
+    stroke="#141414"
+    stroke-width="8"
+    paint-order="stroke fill"
+  >RC</text>
+  <text
+    x="256"
+    y="370"
+    text-anchor="middle"
+    font-family="Varsity Team, Graduate, Rockwell Extra Bold, Impact, sans-serif"
+    font-size="126"
+    font-weight="900"
+    letter-spacing="2"
+    fill="#ffc900"
+    stroke="#141414"
+    stroke-width="8"
+    paint-order="stroke fill"
+  >KE</text>
 </svg>
