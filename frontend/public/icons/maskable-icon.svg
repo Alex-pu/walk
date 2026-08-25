@@ -1,33 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="RCKE maskable app icon">
-  <rect width="512" height="512" fill="#141414"/>
-  <rect x="54" y="54" width="404" height="404" fill="#ffc900"/>
-  <rect x="82" y="82" width="348" height="348" fill="#45143f"/>
-  <rect x="112" y="112" width="288" height="288" fill="#983b86"/>
-  <path d="M118 258h276" stroke="#ffc900" stroke-width="16" stroke-linecap="square"/>
+  <rect width="512" height="512" fill="#983b86"/>
   <text
     x="256"
-    y="216"
+    y="218"
     text-anchor="middle"
     font-family="Varsity Team, Graduate, Rockwell Extra Bold, Impact, sans-serif"
-    font-size="126"
+    font-size="136"
     font-weight="900"
     letter-spacing="2"
     fill="#ffffff"
-    stroke="#141414"
-    stroke-width="8"
-    paint-order="stroke fill"
   >RC</text>
   <text
     x="256"
-    y="370"
+    y="372"
     text-anchor="middle"
     font-family="Varsity Team, Graduate, Rockwell Extra Bold, Impact, sans-serif"
-    font-size="126"
+    font-size="136"
     font-weight="900"
     letter-spacing="2"
-    fill="#ffc900"
-    stroke="#141414"
-    stroke-width="8"
-    paint-order="stroke fill"
+    fill="#ffffff"
   >KE</text>
 </svg>
