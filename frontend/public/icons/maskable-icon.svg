@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Run Community Kenya maskable icon">
+  <rect width="512" height="512" fill="#0f766e"/>
+  <circle cx="256" cy="256" r="204" fill="#14b8a6"/>
+  <path d="M84 330c68-88 137-88 205 0s137 88 205 0" fill="none" stroke="#e7f8f2" stroke-width="42" stroke-linecap="round"/>
+  <circle cx="205" cy="168" r="40" fill="#fef3c7"/>
+  <path d="M260 220l-46 88 62 42 52 86" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M260 220l82 44 58-30" fill="none" stroke="#ffffff" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M214 308l-54 92" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="round"/>
+</svg>
