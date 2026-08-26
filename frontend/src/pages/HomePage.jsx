@@ -6,6 +6,7 @@ import { api } from "../api/client.js";
 import PageHero from "../components/PageHero.jsx";
 import SessionCard from "../components/SessionCard.jsx";
 import StatTile from "../components/StatTile.jsx";
+import SupportFooter from "../components/SupportFooter.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { formatDistanceKm, formatSessionTime } from "../utils/format.js";
 
@@ -88,6 +89,7 @@ export default function HomePage() {
           <SessionCard key={session.id} session={session} />
         ))}
       </div>
+      <SupportFooter />
     </section>
   );
 }

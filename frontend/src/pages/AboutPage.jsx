@@ -1,6 +1,8 @@
 import { ArrowRight, HeartHandshake, MapPinned, ShieldCheck, UsersRound } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import SupportFooter from "../components/SupportFooter.jsx";
+
 const communityGroups = [
   "Morning and evening runners",
   "Recreational walkers",
@@ -168,6 +170,7 @@ export default function AboutPage() {
           </Link>
         </section>
       </article>
+      <SupportFooter />
     </main>
   );
 }

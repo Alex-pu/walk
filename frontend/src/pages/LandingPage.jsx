@@ -1,6 +1,8 @@
 import { ArrowRight, MapPinned, ShieldCheck, UsersRound } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import SupportFooter from "../components/SupportFooter.jsx";
+
 export default function LandingPage() {
   return (
     <main className="landing-page">
@@ -56,6 +58,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      <SupportFooter />
     </main>
   );
 }
