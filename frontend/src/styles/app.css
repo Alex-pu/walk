@@ -781,6 +781,11 @@ label {
   color: var(--muted);
 }
 
+.formatted-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 .reply-list {
   display: grid;
   gap: 10px;

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import { api } from "../api/client.js";
+import FormattedText from "../components/FormattedText.jsx";
 import PageHero from "../components/PageHero.jsx";
 
 function ReplyItem({ reply, onReply }) {
@@ -9,7 +10,7 @@ function ReplyItem({ reply, onReply }) {
     <div className="reply-item">
       <div>
         <strong>{reply.author_name || "Community member"}</strong>
-        <p>{reply.body}</p>
+        <FormattedText text={reply.body} />
       </div>
       <button type="button" onClick={() => onReply(reply)}>Reply</button>
       {!!reply.children?.length && (
@@ -80,7 +81,7 @@ export default function ForumThreadPage() {
           <span>{thread.category}</span>
           <span>{thread.status}</span>
         </div>
-        <p>{thread.body}</p>
+        <FormattedText text={thread.body} />
 
         {thread.can_moderate && (
           <div className="compact-actions">
