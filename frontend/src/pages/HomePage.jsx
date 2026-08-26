@@ -48,6 +48,7 @@ export default function HomePage() {
         {!user?.latitude || !user?.longitude ? (
           <p>Add an approximate location in Profile to sort nearby sessions.</p>
         ) : null}
+        <Link className="button-link hero-inline-link" to="/about">About RunCommunity</Link>
       </PageHero>
 
       {nextSession ? (

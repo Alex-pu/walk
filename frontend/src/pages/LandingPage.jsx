@@ -11,6 +11,7 @@ export default function LandingPage() {
             <span>Run Community Kenya</span>
           </Link>
           <div className="landing-nav-actions">
+            <Link to="/about">About</Link>
             <Link to="/login">Login</Link>
             <Link className="landing-nav-button" to="/register">Join</Link>
           </div>
@@ -33,6 +34,7 @@ export default function LandingPage() {
               Login <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link className="landing-secondary" to="/register">Create account</Link>
+            <Link className="landing-secondary" to="/about">Read about us</Link>
           </div>
         </div>
 

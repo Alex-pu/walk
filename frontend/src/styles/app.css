@@ -259,6 +259,173 @@ body {
   font-weight: 800;
 }
 
+.about-page {
+  min-height: 100vh;
+  background: var(--blush);
+}
+
+.about-hero {
+  min-height: 74vh;
+  display: grid;
+  align-content: space-between;
+  gap: 40px;
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, 0.94) 0%, rgba(17, 17, 17, 0.78) 48%, rgba(17, 17, 17, 0.22) 100%),
+    url("/landing-hero.png");
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
+  padding: 22px clamp(16px, 7vw, 78px) 56px;
+}
+
+.about-hero-copy {
+  width: min(100%, 860px);
+  display: grid;
+  gap: 18px;
+}
+
+.about-hero-copy h1 {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--display-font);
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.about-hero-copy p:not(.landing-kicker) {
+  max-width: 660px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.08rem;
+  font-weight: 760;
+  line-height: 1.58;
+}
+
+.about-article {
+  width: min(100%, 920px);
+  display: grid;
+  gap: 34px;
+  margin: 0 auto;
+  padding: 42px 16px 84px;
+}
+
+.about-article section,
+.about-intro {
+  display: grid;
+  gap: 14px;
+}
+
+.about-article h2 {
+  margin: 0;
+  color: var(--purple-dark);
+  font-family: var(--display-font);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-article p,
+.about-article blockquote {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.72;
+}
+
+.about-intro {
+  border-left: 8px solid var(--gold);
+  background: var(--white);
+  padding: 22px;
+  box-shadow: 0 12px 24px rgba(114, 36, 100, 0.1);
+}
+
+.about-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-feature-grid div {
+  min-height: 150px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  background: var(--purple-dark);
+  color: var(--white);
+  padding: 18px;
+}
+
+.about-feature-grid svg {
+  color: var(--gold);
+}
+
+.about-feature-grid strong,
+.about-question strong,
+.about-closing strong {
+  color: inherit;
+  font-family: var(--display-font);
+  font-size: 1.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-feature-grid span {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 750;
+}
+
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-list span {
+  background: var(--white);
+  color: var(--purple-dark);
+  font-weight: 800;
+  padding: 9px 11px;
+  box-shadow: 0 8px 18px rgba(114, 36, 100, 0.08);
+}
+
+.about-article blockquote {
+  border-left: 8px solid var(--purple);
+  background: var(--white);
+  color: var(--purple-dark);
+  font-size: 1.08rem;
+  font-weight: 800;
+  padding: 20px;
+}
+
+.about-question {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gold);
+  color: var(--purple-dark);
+  padding: 18px;
+}
+
+.about-closing {
+  background: var(--purple-dark);
+  color: var(--white);
+  padding: 24px;
+}
+
+.about-closing h2,
+.about-closing p {
+  color: inherit;
+}
+
+.about-closing .landing-primary {
+  width: fit-content;
+}
+
+.hero-inline-link {
+  width: fit-content;
+  margin-top: 4px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -1047,6 +1214,20 @@ label {
 
   .landing-stats div {
     min-height: 76px;
+  }
+
+  .about-hero {
+    min-height: 86vh;
+    background-position: 58% center;
+    padding: 16px 16px 36px;
+  }
+
+  .about-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-closing .landing-primary {
+    width: 100%;
   }
 
   .admin-row {
