@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAuth } from "../context/AuthContext.jsx";
 
 export default function LoginPage() {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
@@ -14,7 +15,9 @@ export default function LoginPage() {
     setError("");
     try {
       await login(form);
-      navigate("/home");
+      const next = searchParams.get("next") || window.localStorage.getItem("runcommunity_pending_invite") || "/home";
+      window.localStorage.removeItem("runcommunity_pending_invite");
+      navigate(next);
     } catch (err) {
       setError(err.message);
     }
@@ -38,7 +41,7 @@ export default function LoginPage() {
           <button type="submit">Log in</button>
         </form>
         <p>
-          New here? <Link to="/register">Create an account</Link>
+          New here? <Link to={`/register${searchParams.get("next") ? `?next=${encodeURIComponent(searchParams.get("next"))}` : ""}`}>Create an account</Link>
         </p>
         <p>
           Forgot password? <Link to="/forgot-password">Send reset link</Link>

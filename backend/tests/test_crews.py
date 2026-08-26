@@ -175,3 +175,46 @@ def test_only_organizer_can_create_session():
 
     allowed = client.post(f"/api/crews/{crew_id}/sessions", headers={"Authorization": f"Bearer {organizer_token}"}, json=payload)
     assert allowed.status_code == 201
+
+
+def test_join_crew_creates_membership_for_invited_user():
+    app = create_app(TestConfig)
+    client = app.test_client()
+
+    with app.app_context():
+        db.create_all()
+
+    organizer_token = _register(client)
+    member_response = client.post(
+        "/api/auth/register",
+        json={
+            "name": "Invited User",
+            "email": "invited@example.com",
+            "password": "password123",
+            "neighborhood": "Ruiru",
+        },
+    )
+    member_token = member_response.get_json()["access_token"]
+
+    with app.app_context():
+        organizer = User.query.filter_by(email="crew@example.com").first()
+        crew = Crew(
+            name="Invite Crew",
+            activity_type="walk",
+            visibility="public",
+            meeting_point_name="Park Gate",
+            meeting_latitude=-1.1452,
+            meeting_longitude=36.9561,
+            created_by=organizer.id,
+        )
+        db.session.add(crew)
+        db.session.flush()
+        db.session.add(CrewMember(crew_id=crew.id, user_id=organizer.id, role="organizer"))
+        db.session.commit()
+        crew_id = crew.id
+
+    response = client.post(f"/api/crews/{crew_id}/join", headers={"Authorization": f"Bearer {member_token}"})
+
+    assert response.status_code == 200
+    members = response.get_json()["crew"]["members"]
+    assert any(member["name"] == "Invited User" for member in members)

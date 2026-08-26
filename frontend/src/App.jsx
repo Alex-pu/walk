@@ -8,6 +8,7 @@ import ActivityDetailPage from "./pages/ActivityDetailPage.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
 import CrewDetailPage from "./pages/CrewDetailPage.jsx";
 import CrewsPage from "./pages/CrewsPage.jsx";
+import CrewInvitePage from "./pages/CrewInvitePage.jsx";
 import DiscoverPage from "./pages/DiscoverPage.jsx";
 import CrewForumPage from "./pages/CrewForumPage.jsx";
 import ForumPage from "./pages/ForumPage.jsx";
@@ -27,6 +28,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/join/crew/:crewId" element={<CrewInvitePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />

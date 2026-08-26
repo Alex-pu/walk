@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Clock, MapPinned, Trophy, Users, Zap } from "lucide-react";
+import { Clock, MapPinned, Share2, Trophy, Users, Zap } from "lucide-react";
 
 import { api } from "../api/client.js";
 import PageHero from "../components/PageHero.jsx";
@@ -117,6 +117,25 @@ export default function CrewDetailPage() {
     }
   }
 
+  async function shareCrewInvite() {
+    const inviteUrl = `${window.location.origin}/join/crew/${crewId}`;
+    setFormMessage("");
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: `Join ${crew.name} on Run Community Kenya`,
+          text: `Join my Run Community Kenya crew: ${crew.name}`,
+          url: inviteUrl,
+        });
+        return;
+      }
+      await navigator.clipboard.writeText(inviteUrl);
+      setFormMessage("Crew invite link copied.");
+    } catch (error) {
+      setFormMessage("Could not share the invite link.");
+    }
+  }
+
   if (!crew) return <section className="page">Loading...</section>;
 
   return (
@@ -126,6 +145,10 @@ export default function CrewDetailPage() {
       </PageHero>
       <div className="action-row">
         <button onClick={() => api.joinCrew(crewId).then(loadCrew)}>Join crew</button>
+        <button type="button" onClick={shareCrewInvite}>
+          <Share2 size={18} aria-hidden="true" />
+          Share invite
+        </button>
         {(crew.current_user_role || user.platform_role === "admin") && (
           <Link className="button-link" to={`/crews/${crewId}/forum`}>Crew forum</Link>
         )}
