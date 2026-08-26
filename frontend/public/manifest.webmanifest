@@ -5,9 +5,9 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f8fafc",
-  "theme_color": "#0f766e",
-  "description": "Find nearby walking and running groups, join sessions, check in safely, and track activities.",
+  "background_color": "#fdeafd",
+  "theme_color": "#983b86",
+  "description": "Find local walking and running crews in Kenya, join safe group sessions, and build consistent fitness routines.",
   "categories": ["health", "fitness", "social"],
   "icons": [
     {
